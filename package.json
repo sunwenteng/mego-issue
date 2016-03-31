@@ -1,0 +1,67 @@
+{
+  "name": "mego-issue",
+
+  "version": "0.0.1",
+  "description": "Sample project that uses material-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunwenteng/mego-issue.git"
+  },
+  "scripts": {
+    "production": "webpack --config webpack.config.production.js --progress --colors --profile",
+    "development": "webpack --config webpack.config.development.js --progress --colors --inline",
+    "hot-server": "cross-env HOT=1 NODE_ENV=development node server.js",
+    "start": "node server.js"
+  },
+  "author": {
+    "name": "sunwenteng",
+    "email": "elvessun@gmail.com",
+    "url": "https://github.com/sunwenteng"
+  },
+  "license": "MIT",
+  "keywords": [
+    "material-ui",
+    "react",
+    "react-router",
+    "flux",
+    "webpack",
+    "react-hot"
+  ],
+  "homepage": "https://github.com/sunwenteng/mego-issue#readme",
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-eslint": "^6.0.0",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-runtime": "^6.3.19",
+    "cross-env": "^1.0.7",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.5.1",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-react": "^4.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "express": "^4.13.4",
+    "font-awesome": "^4.5.0",
+    "html-webpack-plugin": "^2.7.2",
+    "json-loader": "^0.5.4",
+    "raw-loader": "^0.5.1",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^2.0.0",
+    "style-loader": "^0.13.1",
+    "transfer-webpack-plugin": "^0.1.4",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "dependencies": {
+    "material-ui": "^0.15.0-alpha.2",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-tap-event-plugin": "^0.2.1"
+  },
+  "devEngines": {
+    "node": "4.x || 5.x",
+    "npm": "2.x || 3.x"
+  }
+}
