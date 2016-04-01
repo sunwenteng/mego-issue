@@ -32,6 +32,9 @@ $ npm run hot-server
 
 *Note: requires a node version >= 4 and an npm version >= 2.*
 
+## Visit
+
+Open browser and type: http://localhost:3000/
 
 ## Maintainers
 
