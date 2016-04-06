@@ -18,7 +18,7 @@ import FullWidthSection from './FullWidthSection';
 const githubButton = (
     <IconButton
         iconClassName="muidocs-icon-custom-github"
-        href="https://github.com/callemall/material-ui"
+        href="https://github.com/sunwenteng"
         linkButton={true}
     />
 );
@@ -204,24 +204,13 @@ const Master = React.createClass({
                 />
                 <FullWidthSection style={styles.footer}>
                     <p style={this.prepareStyles(styles.p)}>
-                        {'Hand crafted with love by the engineers at '}
-                        <a style={styles.a} href="http://call-em-all.com">
-                            Call-Em-All
+                        {'Done By '}
+                        <a style={styles.a} href="https://github.com/sunwenteng">
+                            Sunwenteng.
                         </a>
-                        {' and our awesome '}
-                        <a
-                            style={this.prepareStyles(styles.a)}
-                            href="https://github.com/callemall/material-ui/graphs/contributors"
-                        >
-                            contributors
-                        </a>.
+                        {' Still going on. '}
                     </p>
-                    <IconButton
-                        iconStyle={styles.iconButton}
-                        iconClassName="muidocs-icon-custom-github"
-                        href="https://github.com/callemall/material-ui"
-                        linkButton={true}
-                    />
+                    {githubButton}
                 </FullWidthSection>
             </div>
         );

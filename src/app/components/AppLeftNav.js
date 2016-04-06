@@ -86,9 +86,7 @@ const AppLeftNav = React.createClass({
                 <SelectableList
                     valueLink={{value: location.pathname, requestChange: onRequestChangeList}}
                 >
-
                     <ListItem primaryText="Home" value="/home"/>
-
                     <ListItem
                         primaryText="Product Info"
                         primaryTogglesNestedList={true}
@@ -97,6 +95,7 @@ const AppLeftNav = React.createClass({
               <ListItem primaryText="Query" value="/product/query" />,
             ]}
                     />
+                    <ListItem primaryText="Test" value="/test"/>
                 </SelectableList>
                 <Divider />
                 <SelectableList

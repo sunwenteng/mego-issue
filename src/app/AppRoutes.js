@@ -9,6 +9,7 @@ import Master from './components/Master';
 import ProductInsert from './components/pages/ProductInsert';
 import ProductQuery from './components/pages/ProductQuery';
 import Home from './components/pages/Home';
+import Test from './components/pages/Test';
 
 const AppRoutes = (
     <Route path="/" component={Master}>
@@ -18,6 +19,7 @@ const AppRoutes = (
             <Route path="insert" component={ProductInsert}/>
             <Route path="query" component={ProductQuery}/>
         </Route>
+        <Route path="test" component={Test}/>
     </Route>
 );
 
