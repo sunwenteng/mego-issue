@@ -1,10 +1,7 @@
 import React from 'react';
-
-import ClearFix from 'material-ui/lib/clearfix';
-import styleResizable from 'material-ui/lib/mixins/style-resizable';
-import spacing from 'material-ui/lib/styles/spacing';
-
-let desktopGutter = spacing.desktopGutter;
+import {ClearFix, Mixins, Styles} from 'material-ui';
+let {StylePropable, StyleResizable} = Mixins;
+let DesktopGutter = Styles.Spacing.desktopGutter;
 
 const FullWidthSection = React.createClass({
 
@@ -17,7 +14,8 @@ const FullWidthSection = React.createClass({
     },
 
     mixins: [
-        styleResizable,
+        StylePropable,
+        StyleResizable,
     ],
 
     getDefaultProps() {
@@ -30,41 +28,41 @@ const FullWidthSection = React.createClass({
     getStyles() {
         return {
             root: {
-                padding: desktopGutter,
+                padding: DesktopGutter + 'px',
                 boxSizing: 'border-box',
             },
             content: {
-                maxWidth: 1200,
+                maxWidth: '1200px',
                 margin: '0 auto',
             },
             rootWhenSmall: {
-                paddingTop: desktopGutter * 2,
-                paddingBottom: desktopGutter * 2,
+                paddingTop: DesktopGutter * 2,
+                paddingBottom: DesktopGutter * 2,
             },
             rootWhenLarge: {
-                paddingTop: desktopGutter * 3,
-                paddingBottom: desktopGutter * 3,
+                paddingTop: DesktopGutter * 3,
+                paddingBottom: DesktopGutter * 3,
             },
         };
     },
 
     render() {
-        const {
+        let {
             style,
             useContent,
             contentType,
             contentStyle,
-            ...other
+            ...other,
         } = this.props;
 
-        const styles = this.getStyles();
+        let styles = this.getStyles();
 
         let content;
         if (useContent) {
             content =
                 React.createElement(
                     contentType,
-                    {style: Object.assign(styles.content, contentStyle)},
+                    {style: this.mergeStyles(styles.content, contentStyle)},
                     this.props.children
                 );
         } else {
@@ -74,11 +72,11 @@ const FullWidthSection = React.createClass({
         return (
             <ClearFix
                 {...other}
-                style={Object.assign(
+                style={this.mergeStyles(
           styles.root,
           style,
-          this.isDeviceSize(styleResizable.statics.Sizes.SMALL) && styles.rootWhenSmall,
-          this.isDeviceSize(styleResizable.statics.Sizes.LARGE) && styles.rootWhenLarge)}
+          this.isDeviceSize(StyleResizable.statics.Sizes.SMALL) && styles.rootWhenSmall,
+          this.isDeviceSize(StyleResizable.statics.Sizes.LARGE) && styles.rootWhenLarge)}
             >
                 {content}
             </ClearFix>

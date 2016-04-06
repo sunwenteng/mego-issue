@@ -31,7 +31,7 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/src/www/index.html');
 });
 
-app.listen(PORT, 'localhost', err => {
+app.listen(PORT, '0.0.0.0', err => {
     if (err) {
         console.log(err);
         return;
