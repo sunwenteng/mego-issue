@@ -1,6 +1,7 @@
 import React from 'react';
 import AppBar from 'material-ui/lib/app-bar';
 import IconButton from 'material-ui/lib/icon-button';
+import Avatar from 'material-ui/lib/avatar';
 import {Spacing} from 'material-ui/lib/styles';
 import {
     StylePropable,
@@ -178,7 +179,10 @@ const Master = React.createClass({
                     onLeftIconButtonTouchTap={this.handleTouchTapLeftIconButton}
                     title={title}
                     zDepth={0}
-                    iconElementRight={githubButton}
+                    iconElementRight={
+                    // TODO
+                        <Avatar>S</Avatar>
+                    }
                     style={styles.appBar}
                     showMenuIconButton={showMenuIconButton}
                 />
