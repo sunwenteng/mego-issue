@@ -1,82 +1,52 @@
 import React from 'react';
-import {StylePropable, StyleResizable} from 'material-ui/lib/mixins';
-import MarkdownElement from '../MarkdownElement';
-import changeLog from '../../../../CHANGELOG.md';
+import IconMenu from 'material-ui/lib/menus/icon-menu';
 import IconButton from 'material-ui/lib/icon-button';
 import FontIcon from 'material-ui/lib/font-icon';
-import Colors from 'material-ui/lib/styles/colors';
-import Divider from 'material-ui/lib/divider';
-import Paper from 'material-ui/lib/paper';
-import TextField from 'material-ui/lib/text-field';
-
-const style = {
-    marginLeft: 20,
-};
-
-const DividerExampleForm = (
-    <Paper zDepth={2}>
-        <TextField hintText="First name" style={style} underlineShow={false}/>
-        <Divider />
-        <TextField hintText="Middle name" style={style} underlineShow={false}/>
-        <Divider />
-        <TextField hintText="Last name" style={style} underlineShow={false}/>
-        <Divider />
-        <TextField hintText="Email address" style={style} underlineShow={false}/>
-        <Divider />
-    </Paper>
-);
-
-export default DividerExampleForm;
-
-
-const githubButton = (
-    <IconButton
-        iconClassName="muidocs-icon-custom-github"
-        href="https://github.com/sunwenteng"
-        linkButton={true}
-    />
-);
-
-const iconStyles = {
-    marginRight: 24,
-};
-
-const FontIconExampleSimple = (
-    <div>
-        <FontIcon
-            className="muidocs-icon-action-home"
-            style={iconStyles}
-        />
-
-        <FontIcon
-            className="muidocs-icon-action-home"
-            style={iconStyles}
-            color={Colors.blue500}
-        />
-
-        <FontIcon
-            className="muidocs-icon-action-home"
-            style={iconStyles}
-            color={Colors.red500}
-            hoverColor={Colors.greenA200}
-        />
-    </div>
+import NavigationExpandMoreIcon from 'material-ui/lib/svg-icons/navigation/expand-more';
+import MenuItem from 'material-ui/lib/menus/menu-item';
+import DropDownMenu from 'material-ui/lib/DropDownMenu';
+import RaisedButton from 'material-ui/lib/raised-button';
+import Toolbar from 'material-ui/lib/toolbar/toolbar';
+import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
+import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
+import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
+const ToolbarExamplesSimple = (
+    <Toolbar>
+        <ToolbarGroup firstChild={true} float="left">
+            <DropDownMenu value={3}>
+                <MenuItem value={1} primaryText="All Broadcasts" />
+                <MenuItem value={2} primaryText="All Voice" />
+                <MenuItem value={3} primaryText="All Text" />
+                <MenuItem value={4} primaryText="Complete Voice" />
+                <MenuItem value={5} primaryText="Complete Text" />
+                <MenuItem value={6} primaryText="Active Voice" />
+                <MenuItem value={7} primaryText="Active Text" />
+            </DropDownMenu>
+        </ToolbarGroup>
+        <ToolbarGroup float="right">
+            <ToolbarTitle text="Options" />
+            <FontIcon className="muidocs-icon-custom-sort" />
+            <IconMenu
+                iconButtonElement={
+          <IconButton touch={true}>
+            <NavigationExpandMoreIcon />
+          </IconButton>
+        }
+            >
+                <MenuItem primaryText="Download" />
+                <MenuItem primaryText="More Info" />
+            </IconMenu>
+            <ToolbarSeparator />
+            <RaisedButton label="Create Broadcast" primary={true} />
+        </ToolbarGroup>
+    </Toolbar>
 );
 
 const Test = React.createClass({
-
-    mixins: [
-        StylePropable,
-        StyleResizable,
-    ],
-
-
     render() {
         return (
             <div>
-                {githubButton}
-                {FontIconExampleSimple}
-                {DividerExampleForm}
+                {ToolbarExamplesSimple}
             </div>
         );
     },
