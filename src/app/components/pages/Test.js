@@ -1,53 +1,65 @@
 import React from 'react';
-import IconMenu from 'material-ui/lib/menus/icon-menu';
-import IconButton from 'material-ui/lib/icon-button';
-import FontIcon from 'material-ui/lib/font-icon';
-import NavigationExpandMoreIcon from 'material-ui/lib/svg-icons/navigation/expand-more';
-import MenuItem from 'material-ui/lib/menus/menu-item';
-import DropDownMenu from 'material-ui/lib/DropDownMenu';
-import RaisedButton from 'material-ui/lib/raised-button';
-import Toolbar from 'material-ui/lib/toolbar/toolbar';
-import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
-import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
-import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
-const ToolbarExamplesSimple = (
-    <Toolbar>
-        <ToolbarGroup firstChild={true} float="left">
-            <DropDownMenu value={3}>
-                <MenuItem value={1} primaryText="All Broadcasts" />
-                <MenuItem value={2} primaryText="All Voice" />
-                <MenuItem value={3} primaryText="All Text" />
-                <MenuItem value={4} primaryText="Complete Voice" />
-                <MenuItem value={5} primaryText="Complete Text" />
-                <MenuItem value={6} primaryText="Active Voice" />
-                <MenuItem value={7} primaryText="Active Text" />
-            </DropDownMenu>
-        </ToolbarGroup>
-        <ToolbarGroup float="right">
-            <ToolbarTitle text="Options" />
-            <FontIcon className="muidocs-icon-custom-sort" />
-            <IconMenu
-                iconButtonElement={
-          <IconButton touch={true}>
-            <NavigationExpandMoreIcon />
-          </IconButton>
-        }
-            >
-                <MenuItem primaryText="Download" />
-                <MenuItem primaryText="More Info" />
-            </IconMenu>
-            <ToolbarSeparator />
-            <RaisedButton label="Create Broadcast" primary={true} />
-        </ToolbarGroup>
-    </Toolbar>
-);
+
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+
+const productLong = [
+    {id: 1, name: 1, price: 1},
+    {id: 2, name: 2, price: 2},
+    {id: 3, name: 3, price: 3},
+    {id: 1, name: 1, price: 1},
+    {id: 2, name: 2, price: 2},
+    {id: 3, name: 3, price: 3},
+    {id: 1, name: 1, price: 1},
+    {id: 2, name: 2, price: 2},
+    {id: 3, name: 3, price: 3},
+    {id: 1, name: 1, price: 1},
+    {id: 2, name: 2, price: 2},
+    {id: 3, name: 3, price: 3},
+    {id: 1, name: 1, price: 1},
+    {id: 2, name: 2, price: 2},
+    {id: 3, name: 3, price: 3},
+    {id: 1, name: 1, price: 1},
+    {id: 2, name: 2, price: 2},
+    {id: 3, name: 3, price: 3},
+];
+
+//Row select setting
+const selectRowProp = {
+    mode: 'radio',
+    clickToSelect: true,   //click row will trigger a selection on that row.
+    bgColor: "rgb(238, 193, 213)",   //selected row background color
+    onSelect: (row, isSelected) => {
+        alert(row + ':' + isSelected);
+    }
+};
+
+function format(cell, row){
+    return '<i class="glyphicon glyphicon-usd"></i> ' + cell;
+}
 
 const Test = React.createClass({
     render() {
         return (
-            <div>
-                {ToolbarExamplesSimple}
-            </div>
+            <BootstrapTable
+                data={productLong}
+                striped={true}
+                hover={true}
+                condensed={true}
+                pagination={true}
+                selectRow={selectRowProp}
+                insertRow={false}
+                deleteRow={false}
+                columnFilter={false}
+                search={false}
+                exportCSV={true}
+            >
+                <TableHeaderColumn dataField="id" isKey={true} dataAlign="right" dataSort={true}>
+                    产品名称
+                </TableHeaderColumn>
+                <TableHeaderColumn dataField="name" dataSort={true}>Product Name</TableHeaderColumn>
+                <TableHeaderColumn dataField="price" dataAlign="center" dataFormat={format}>Product
+                    Price</TableHeaderColumn>
+            </BootstrapTable>
         );
     },
 });
