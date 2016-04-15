@@ -52,7 +52,7 @@ const Test = React.createClass({
                 onChange={this.handleChange}
             >
                 <Tab label="产品&评测" value="a">
-                    <div>
+                    <div style={{margin: 1}}>
                         <Paper>
                             <Toolbar>
                                 <ToolbarGroup
@@ -112,7 +112,7 @@ const Test = React.createClass({
                     </div>
                 </Tab>
                 <Tab label="相关记录" value="b">
-                    <div>
+                    <div style={{margin: 1}}>
                         <Paper>
                             <Toolbar>
                                 <ToolbarGroup
@@ -128,7 +128,7 @@ const Test = React.createClass({
                     </div>
                 </Tab>
                 <Tab label="文件下载" value="c">
-                    <div>
+                    <div style={{margin: 1}}>
                         <Paper>
                             <Toolbar>
                                 <ToolbarGroup
@@ -146,7 +146,7 @@ const Test = React.createClass({
                     </div>
                 </Tab>
                 <Tab label="历史版本" value="d">
-                    <div>
+                    <div style={{margin: 1}}>
                         <Paper>
                             <Container
                                 text='产品名称:'
