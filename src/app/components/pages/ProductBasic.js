@@ -2,7 +2,9 @@ import React from 'react';
 
 import LinkedStateMixin from 'react-addons-linked-state-mixin';
 import Paper from 'material-ui/lib/paper';
-import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/lib/Toolbar';
+import Toolbar from 'material-ui/lib/toolbar/toolbar';
+import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
+import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
 import TextField from 'material-ui/lib/text-field';
 import SelectField from 'material-ui/lib/select-field'
 import MenuItem from 'material-ui/lib/menus/menu-item';
@@ -49,7 +51,7 @@ var ProductInsert = React.createClass({
 
     mixins: [LinkedStateMixin],
 
-    getInitialState: function() {
+    getInitialState: () => {
         return {
             name: '',
             company: '',

@@ -41,7 +41,7 @@ function format(cell, row) {
 }
 
 const ProductQuery = React.createClass({
-    getInitialState: function () {
+    getInitialState: () => {
         return {
             pc: '',
             pj: '',
@@ -80,7 +80,115 @@ const ProductQuery = React.createClass({
                 {id: 15, name: 3, price: 3},
                 {id: 16, name: 1, price: 1},
                 {id: 17, name: 2, price: 2},
-                {id: 18, name: 3, price: 3}
+                {id: 18, name: 3, price: 3},
+                {id: 1, name: 1, price: 1},
+                {id: 2, name: 2, price: 2},
+                {id: 3, name: 3, price: 3},
+                {id: 4, name: 1, price: 1},
+                {id: 5, name: 2, price: 2},
+                {id: 6, name: 3, price: 3},
+                {id: 7, name: 1, price: 1},
+                {id: 8, name: 2, price: 2},
+                {id: 9, name: 3, price: 3},
+                {id: 10, name: 1, price: 1},
+                {id: 11, name: 2, price: 2},
+                {id: 12, name: 3, price: 3},
+                {id: 13, name: 1, price: 1},
+                {id: 14, name: 2, price: 2},
+                {id: 15, name: 3, price: 3},
+                {id: 16, name: 1, price: 1},
+                {id: 17, name: 2, price: 2},
+                {id: 18, name: 3, price: 3},
+                {id: 1, name: 1, price: 1},
+                {id: 2, name: 2, price: 2},
+                {id: 3, name: 3, price: 3},
+                {id: 4, name: 1, price: 1},
+                {id: 5, name: 2, price: 2},
+                {id: 6, name: 3, price: 3},
+                {id: 7, name: 1, price: 1},
+                {id: 8, name: 2, price: 2},
+                {id: 9, name: 3, price: 3},
+                {id: 10, name: 1, price: 1},
+                {id: 11, name: 2, price: 2},
+                {id: 12, name: 3, price: 3},
+                {id: 13, name: 1, price: 1},
+                {id: 14, name: 2, price: 2},
+                {id: 15, name: 3, price: 3},
+                {id: 16, name: 1, price: 1},
+                {id: 17, name: 2, price: 2},
+                {id: 18, name: 3, price: 3},
+                {id: 1, name: 1, price: 1},
+                {id: 2, name: 2, price: 2},
+                {id: 3, name: 3, price: 3},
+                {id: 4, name: 1, price: 1},
+                {id: 5, name: 2, price: 2},
+                {id: 6, name: 3, price: 3},
+                {id: 7, name: 1, price: 1},
+                {id: 8, name: 2, price: 2},
+                {id: 9, name: 3, price: 3},
+                {id: 10, name: 1, price: 1},
+                {id: 11, name: 2, price: 2},
+                {id: 12, name: 3, price: 3},
+                {id: 13, name: 1, price: 1},
+                {id: 14, name: 2, price: 2},
+                {id: 15, name: 3, price: 3},
+                {id: 16, name: 1, price: 1},
+                {id: 17, name: 2, price: 2},
+                {id: 18, name: 3, price: 3},
+                {id: 1, name: 1, price: 1},
+                {id: 2, name: 2, price: 2},
+                {id: 3, name: 3, price: 3},
+                {id: 4, name: 1, price: 1},
+                {id: 5, name: 2, price: 2},
+                {id: 6, name: 3, price: 3},
+                {id: 7, name: 1, price: 1},
+                {id: 8, name: 2, price: 2},
+                {id: 9, name: 3, price: 3},
+                {id: 10, name: 1, price: 1},
+                {id: 11, name: 2, price: 2},
+                {id: 12, name: 3, price: 3},
+                {id: 13, name: 1, price: 1},
+                {id: 14, name: 2, price: 2},
+                {id: 15, name: 3, price: 3},
+                {id: 16, name: 1, price: 1},
+                {id: 17, name: 2, price: 2},
+                {id: 18, name: 3, price: 3},
+                {id: 1, name: 1, price: 1},
+                {id: 2, name: 2, price: 2},
+                {id: 3, name: 3, price: 3},
+                {id: 4, name: 1, price: 1},
+                {id: 5, name: 2, price: 2},
+                {id: 6, name: 3, price: 3},
+                {id: 7, name: 1, price: 1},
+                {id: 8, name: 2, price: 2},
+                {id: 9, name: 3, price: 3},
+                {id: 10, name: 1, price: 1},
+                {id: 11, name: 2, price: 2},
+                {id: 12, name: 3, price: 3},
+                {id: 13, name: 1, price: 1},
+                {id: 14, name: 2, price: 2},
+                {id: 15, name: 3, price: 3},
+                {id: 16, name: 1, price: 1},
+                {id: 17, name: 2, price: 2},
+                {id: 18, name: 3, price: 3},
+                {id: 1, name: 1, price: 1},
+                {id: 2, name: 2, price: 2},
+                {id: 3, name: 3, price: 3},
+                {id: 4, name: 1, price: 1},
+                {id: 5, name: 2, price: 2},
+                {id: 6, name: 3, price: 3},
+                {id: 7, name: 1, price: 1},
+                {id: 8, name: 2, price: 2},
+                {id: 9, name: 3, price: 3},
+                {id: 10, name: 1, price: 1},
+                {id: 11, name: 2, price: 2},
+                {id: 12, name: 3, price: 3},
+                {id: 13, name: 1, price: 1},
+                {id: 14, name: 2, price: 2},
+                {id: 15, name: 3, price: 3},
+                {id: 16, name: 1, price: 1},
+                {id: 17, name: 2, price: 2},
+                {id: 18, name: 3, price: 3},
             ]
         });
     },
@@ -133,7 +241,7 @@ const ProductQuery = React.createClass({
                         <TableHeaderColumn dataField="type">
                             类型
                         </TableHeaderColumn>
-                        <TableHeaderColumn dataField="ip" >
+                        <TableHeaderColumn dataField="ip">
                             题材
                         </TableHeaderColumn>
                         <TableHeaderColumn dataField="status" dataSort={true}>
@@ -145,19 +253,19 @@ const ProductQuery = React.createClass({
                         <TableHeaderColumn dataField="company">
                             研发公司
                         </TableHeaderColumn>
-                        <TableHeaderColumn dataField="createTime"  dataSort={true}>
+                        <TableHeaderColumn dataField="createTime" dataSort={true}>
                             创建日期
                         </TableHeaderColumn>
                         <TableHeaderColumn dataField="creator">
                             创建人
                         </TableHeaderColumn>
-                        <TableHeaderColumn dataField="modifyDate"  dataSort={true}>
+                        <TableHeaderColumn dataField="modifyDate" dataSort={true}>
                             修改日期
                         </TableHeaderColumn>
                         <TableHeaderColumn dataField="modifyer">
                             修改人
                         </TableHeaderColumn>
-                        <TableHeaderColumn dataField="score"  dataSort={true}>
+                        <TableHeaderColumn dataField="score" dataSort={true}>
                             综合评分
                         </TableHeaderColumn>
                         <TableHeaderColumn dataField="steper">
