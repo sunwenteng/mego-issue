@@ -1,6 +1,5 @@
 {
   "name": "mego-issue",
-
   "version": "0.0.1",
   "description": "Sample project that uses material-ui",
   "repository": {
@@ -11,9 +10,7 @@
     "production": "webpack --config webpack.config.production.js --progress --colors --profile",
     "development": "webpack --config webpack.config.development.js --progress --colors --inline",
     "hot-server": "cross-env HOT=1 NODE_ENV=development node server.js",
-    "start": "node server.js",
-    "native:development": "node_modules/react-native/packager/packager.sh --reset-cache",
-    "android:setup-port": "adb reverse tcp:8081 tcp:8081"
+    "cordova": "gulp initCordova"
   },
   "author": {
     "name": "sunwenteng",
@@ -69,7 +66,17 @@
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0",
-    "react-native": "^0.23.0"
+    "cordova-lib": "^5.1.1",
+    "del": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-run": "^1.6.10",
+    "gulp-webpack": "^1.5.0",
+    "run-sequence": "^1.1.2",
+    "sass-loader": "^3.2.0",
+    "chdir-promise": "^0.2.1",
+    "cordova-browser": "^4.1.0",
+    "cordova-ios": "^4.1.1"
   },
   "dependencies": {
     "material-ui": "^0.14.4",
@@ -77,11 +84,7 @@
     "react-dom": "^0.14.3",
     "react-tap-event-plugin": "^0.2.1",
     "react-title-component": "^1.0.1",
-    "react-addons-linked-state-mixin": "0.14.7",
-    "react-redux": "^4.4.1",
-    "redux": "^3.3.1",
-    "redux-logger": "^2.6.1",
-    "react-bootstrap-table":"^2.1.3"
+    "react-addons-linked-state-mixin": "0.14.7"
   },
   "devEngines": {
     "node": "4.x || 5.x",
