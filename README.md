@@ -1,5 +1,5 @@
 #MEGO-ISSUE
-> Just for fun to develop this.
+> Just for fun to develop this. React, Express, Cordova etc.
 
 ## Install
 
